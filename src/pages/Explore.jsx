@@ -23,7 +23,7 @@ export default function Explore() {
     <div className="explore-page">
       <div className="page-header explore-header">
         <h1 className="page-title">Explore Circlo</h1>
-        <p className="page-sub">Browse what people around Rwanda are exchanging, donating, selling, and recycling.</p>
+        <p className="page-sub">Browse what people are exchanging, donating, selling, and recycling.</p>
       </div>
 
       <div className="explore-search">

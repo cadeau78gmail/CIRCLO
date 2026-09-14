@@ -1,15 +1,16 @@
 import { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { myListings, userImpact } from '../data/mockData'
 
 const initialProfile = {
   name: 'Isabelle Cadeau',
   username: 'isabelle',
-  location: 'Kigali, Rwanda',
+  location: 'Kigali',
   bio: 'Giving useful things another life.'
 }
 
 export default function Profile() {
+  const navigate = useNavigate()
   const [profile, setProfile] = useState(initialProfile)
   const [draft, setDraft] = useState(initialProfile)
   const [photo, setPhoto] = useState(null)
@@ -126,7 +127,7 @@ export default function Profile() {
           <ProfileLink to="/app/settings" icon={<LockIcon />} title="Privacy & Security" description="Control your account privacy" />
           <ProfileLink to="/app/help" icon={<HelpIcon />} title="Help & Support" description="Find answers and contact support" />
         </div>
-        <button type="button" className="profile-logout">Log out</button>
+        <button type="button" className="profile-logout" onClick={() => navigate('/')}>Log out</button>
       </section>
 
       <input ref={photoInputRef} type="file" accept="image/*" onChange={choosePhoto} hidden />

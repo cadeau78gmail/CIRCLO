@@ -1,6 +1,6 @@
-# ReLoop Rwanda — frontend
+# Circlo — frontend
 
-React + Vite frontend for ReLoop Rwanda, a circular-economy platform ("Give it another life.").
+React + Vite frontend for Circlo, a circular-economy platform ("Give it another life.").
 Runs entirely on mock data (`src/data/mockData.js`) — no backend needed yet.
 
 ## Run it

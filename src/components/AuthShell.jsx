@@ -40,7 +40,7 @@ export default function AuthShell({ title, sub, children, footer, variant = '' }
             {variant === 'signup' || variant === 'login' || variant === 'verify' || variant === 'preferences' ? (
               <img src="/hero-images/cccccc.png" alt="Circlo" style={{ width: 180, height: 'auto' }} />
             ) : (
-              <img src="/hero-images/best.png" alt="Circlo Rwanda" style={{ width: 180, height: 'auto', filter: 'brightness(0) invert(1)' }} />
+              <img src="/hero-images/best.png" alt="Circlo" style={{ width: 180, height: 'auto', filter: 'brightness(0) invert(1)' }} />
             )}
           </Link>
           {(variant === 'signup' || variant === 'login' || variant === 'verify' || variant === 'preferences') && (

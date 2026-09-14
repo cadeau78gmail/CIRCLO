@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const notificationDefaults = {
   requests: true,
@@ -18,11 +18,12 @@ const notificationRows = [
 ]
 
 export default function Settings() {
+  const navigate = useNavigate()
   const [notifications, setNotifications] = useState(notificationDefaults)
   const [values, setValues] = useState({
     email: 'isabelle@example.com',
     phone: '+250 788 123 456',
-    location: 'Kigali, Rwanda',
+    location: 'Kigali',
     language: 'English',
     interests: 'Clothing, Books, Electronics'
   })
@@ -86,10 +87,10 @@ export default function Settings() {
         <SettingRow title="Report a problem" description="Tell us about an issue" onClick={() => setModal({ type: 'report' })} />
         <SettingRow title="Terms of Use" description="Review the rules for using Circlo" onClick={() => openInfo('Terms of Use', 'Please review the terms that guide the Circlo community.')} />
         <SettingRow title="Privacy Policy" description="Learn how your information is handled" onClick={() => openInfo('Privacy Policy', 'We only use your information to provide and improve Circlo.')} />
-        <SettingRow title="About Circlo" description="Circlo Rwanda · Version 1.0" onClick={() => openInfo('About Circlo', 'A community platform for keeping useful things in circulation across Rwanda.')} />
+        <SettingRow title="About Circlo" description="Circlo · Version 1.0" onClick={() => openInfo('About Circlo', 'A community platform for keeping useful things in circulation.')} />
       </SettingsSection>
 
-      <button type="button" className="settings-logout">Log out</button>
+      <button type="button" className="settings-logout" onClick={() => navigate('/')}>Log out</button>
 
       {modal && <SettingsModal modal={modal} draft={draft} setDraft={setDraft} onClose={() => setModal(null)} onSave={saveEditor} onChooseOption={(option) => { if (modal.title === 'Language') setValues((current) => ({ ...current, language: option })); setModal(null) }} />}
     </div>

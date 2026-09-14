@@ -194,14 +194,14 @@ function AboutStory() {
           </div>
         </article>
 
-        <article className={`about-story-card about-story-card-rwanda ${visibleCards.rwanda ? 'is-visible' : ''}`} data-card="rwanda">
-          <div className="rwanda-visual" aria-label="Rwanda community connection">
-            <img src="/hero-images/hhhhh.png" alt="Rwanda community visual" />
+        <article className={`about-story-card about-story-card-community ${visibleCards.community ? 'is-visible' : ''}`} data-card="community">
+          <div className="community-visual" aria-label="Community connection">
+            <img src="/hero-images/hhhhh.png" alt="Community visual" />
           </div>
           <div className="about-story-copy">
-            <p className="about-story-kicker">03 / Built for Rwanda</p>
+            <p className="about-story-kicker">03 / Built for communities</p>
             <h2>Reuse starts with our communities.</h2>
-            <p>Circlo is designed with everyday life in Rwanda in mind, connecting people with useful items nearby and making reuse, sharing, and responsible consumption easier.</p>
+            <p>Circlo is designed for everyday community life, connecting people with useful items nearby and making reuse, sharing, and responsible consumption easier.</p>
           </div>
         </article>
       </div>
@@ -258,7 +258,7 @@ export default function Landing() {
     <div className="landing-page">
       <header className="landing-header">
         <div className="landing-header-inner">
-          <Link to="/" className="landing-brand" aria-label="Circlo Rwanda home">
+          <Link to="/" className="landing-brand" aria-label="Circlo home">
             <img className="landing-logo-image" src="/hero-images/cccccc.png" alt="Circlo" />
           </Link>
           <nav className="landing-nav" aria-label="Landing page sections">
@@ -280,7 +280,7 @@ export default function Landing() {
               <p className="eyebrow">Give it another life.</p>
               <h1>Give your things another life.</h1>
               <p className="hero-subtext">
-                Circlo Rwanda helps people give away, exchange, donate, sell, and reuse items instead of
+                Circlo helps people give away, exchange, donate, sell, and reuse items instead of
                 letting useful things go to waste.
               </p>
 
@@ -394,7 +394,7 @@ export default function Landing() {
             <div className="contact-intro">
               <h2>Have a question about Circlo?</h2>
               <p className="contact-lead">We're here to help.</p>
-              <p className="contact-description">Whether you have a question, feedback, or an issue to report, reach out to the Circlo Rwanda team.</p>
+              <p className="contact-description">Whether you have a question, feedback, or an issue to report, reach out to the Circlo team.</p>
 
               <dl className="contact-details">
                 <div>
@@ -403,7 +403,7 @@ export default function Landing() {
                 </div>
                 <div>
                   <dt>Location</dt>
-                  <dd>Rwanda</dd>
+                  <dd>Community support</dd>
                 </div>
               </dl>
             </div>
@@ -439,7 +439,7 @@ export default function Landing() {
 
         <div className="section-shell footer-shell">
           <div className="footer-brand">
-            <div className="footer-title">CIRCLO RWANDA</div>
+            <div className="footer-title">CIRCLO</div>
             <p>Give your things another life.</p>
           </div>
 
@@ -454,7 +454,7 @@ export default function Landing() {
         </div>
 
         <div className="section-shell footer-bottom">
-          <div className="footer-meta">© {new Date().getFullYear()} Circlo Rwanda <span>Privacy</span> <span>Terms</span></div>
+          <div className="footer-meta">© {new Date().getFullYear()} Circlo <span>Privacy</span> <span>Terms</span></div>
           <div className="social-row" aria-label="Social links">
             <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a>
             <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
