@@ -1,3 +1,13 @@
 node_modules
 dist
 .DS_Store
+node_modules/
+backend/node_modules/
+backend/data.json
+.env
+dist/
+server/.secret
+server/circlo.db
+server/circlo.db-shm
+server/circlo.db-wal
+server/node_modules/

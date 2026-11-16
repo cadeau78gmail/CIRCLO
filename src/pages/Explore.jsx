@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ItemCard from '../components/ItemCard'
-import { items } from '../data/mockData'
+import { items as sampleItems } from '../data/mockData'
+import { getListings } from '../api'
 
 const actionFilters = [
   { key: 'all', label: 'All' },
@@ -14,6 +15,24 @@ const sortOptions = ['Recently Added', 'Closest', 'Most Relevant']
 
 export default function Explore() {
   const [filter, setFilter] = useState('all')
+const [items, setItems] = useState(sampleItems)
+useEffect(() => {
+  getListings()
+    .then(serverItems => {
+      if (serverItems.length > 0) {
+        setItems(
+          serverItems.map(item => ({
+            ...item,
+            desc: item.description,
+            posted: 'Just now'
+          }))
+        )
+      }
+    })
+    .catch(error => {
+      console.log('Could not load listings:', error)
+    })
+}, [])
   const [sort, setSort] = useState('Recently Added')
   const [isSortOpen, setIsSortOpen] = useState(false)
 
